@@ -155,6 +155,11 @@
             <version>1.0</version>
         </dependency>
 
+        <!-- sentinel -->
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-core</artifactId>
+        </dependency>
     </dependencies>
 
 

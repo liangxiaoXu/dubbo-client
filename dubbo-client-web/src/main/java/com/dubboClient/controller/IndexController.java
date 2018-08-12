@@ -24,8 +24,13 @@ public class IndexController {
     @RequestMapping("index")
     public String index(HttpServletRequest request, HttpServletResponse response){
         logger.info("this is index.html");
-        UserRes userRes = commonService.getUser(new UserReq("xiaoming", 0));
-        logger.info(userRes.toString());
+        UserRes userRes = null;
+        for( int i = 0; i<50;i++){
+            userRes = commonService.getUser(new UserReq("xiaoming", 0));
+            if( userRes!= null ){
+                logger.info(userRes.toString());
+            }
+        }
         return "index";
     }
 }
